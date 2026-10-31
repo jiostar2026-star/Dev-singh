@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dev Flow AI</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#101116;color:white;font-family:Arial,sans-serif;padding:20px}
+header{font-size:25px;font-weight:bold;color:#b6a0ff;margin-bottom:25px}
+h1{font-size:28px}
+p{color:#c5c5d0;line-height:1.5}
+.panel{background:#20212a;border:1px solid #393a49;border-radius:16px;padding:16px;margin-top:20px}
+textarea{width:100%;height:130px;background:#15161d;color:white;border:1px solid #55566b;border-radius:10px;padding:12px;font-size:16px}
+button{background:#8b70ff;color:white;border:0;border-radius:10px;padding:13px;font-size:16px;width:100%;margin-top:12px}
+button:disabled{opacity:.6}
+#result{margin-top:15px}
+video{width:100%;border-radius:10px}
+</style>
+</head>
+<body>
+<header>✦ Dev Flow AI</header>
+<h1>AI Video Studio</h1>
+<p>Apne idea ko AI video mein badalne ke liye prompt likhein.</p>
+<div class="panel">
+<label for="prompt">Apna video prompt likhein</label>
+<textarea id="prompt" placeholder="Jaise: Ek sundar gaon mein suraj ug raha hai..."></textarea>
+<button id="generate">Video banane ka tareeka dekhein</button>
+<div id="result"></div>
+</div>
+<script>
+document.getElementById("generate").onclick=function(){
+ const prompt=document.getElementById("prompt").value.trim();
+ const result=document.getElementById("result");
+ if(!prompt){
+ result.textContent="Pehle apna video prompt likhein.";
+ return;
+ }
+ result.textContent="Aapka prompt taiyar hai. Asli AI video banane ke liye abhi ek AI video service connect karni hogi.";
+};
+</script>
+</body>
+  </html>
+  
